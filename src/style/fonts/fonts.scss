@@ -11,10 +11,28 @@
   font-style: normal;
 }
 
+%heading-white {
+  font-family: 'Nunito', sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-white;
+}
+
 %body {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
   font-style: normal;
+}
+
+%body-white {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-white;
 }

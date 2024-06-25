@@ -1,13 +1,14 @@
 @import "../../App";
 
 .button {
-  @include centre-items;
+  @include center-items;
   @include pageTransition;
 
   background-color: $primary-color;
-  width: 100px;
+  min-width: 100px;
   height: 34px;
   border-radius: 80px;
+  padding-inline: 19px;
 
   &__text {
     @extend %body;

@@ -30,7 +30,7 @@
   }
 }
 
-@mixin centre-items {
+@mixin center-items {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,4 +42,13 @@
 
 @mixin pageTransition {
   transition: all 500ms ease-in-out;
+}
+
+@mixin center-text {
+  text-align: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
 }

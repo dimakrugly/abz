@@ -1,0 +1,29 @@
+@import "../../App";
+
+.listItem {
+  @include flex-col;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $color-white;
+
+  &__photo {
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+  }
+
+  &__name {
+    @extend %body;
+  }
+
+  &__info {
+    @include flex-col;
+    align-items: center;
+
+    > p {
+      @extend %body;
+    }
+  }
+}

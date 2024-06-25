@@ -1,0 +1,26 @@
+@import "../../../../App";
+
+.list {
+  @include pageInlinePadding;
+  @include flex-col;
+
+  padding-top: 140px;
+  background-color: $background-color;
+
+  &__title {
+    @extend %heading;
+    @include center-text;
+  }
+
+  &__items {
+    @include flex-col;
+
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  &__button {
+    margin-top: 50px;
+    align-self: center;
+  }
+}

@@ -2,26 +2,28 @@
 
 .field {
   @include pageInlinePadding;
+  @include flex-col;
+
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
   url('../../../../assets/field.jpeg') lightgray -446.56px -317.009px / 342.315% 164.03%;
-
   height: 500px;
   padding-top: 40px;
-  display: flex;
-  flex-direction: column;
 
   &__title {
-    @extend %heading;
-    color: $color-white;
-    text-align: center;
+    @extend %heading-white;
+    @include center-text;
   }
 
   &__text {
-    @extend %body;
+    @extend %body-white;
+    @include center-text;
+
     margin-top: 21px;
-    color: $color-white;
-    text-align: center;
   }
 
+  &__button {
+    margin-top: 32px;
+    align-self: center;
+  }
 
 }
