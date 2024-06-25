@@ -2,6 +2,7 @@
 
 .button {
   @include centre-items;
+  @include pageTransition;
 
   background-color: $primary-color;
   width: 100px;
@@ -10,5 +11,17 @@
 
   &__text {
     @extend %body;
+
+    &--disabled {
+      color: $color-white;
+    }
+  }
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &--disabled {
+    background-color: $button-disabled;
   }
 }

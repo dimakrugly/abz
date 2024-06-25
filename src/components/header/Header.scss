@@ -1,6 +1,9 @@
+@import "../../App";
+
 .header {
+  @include pageInlinePadding;
+
   height: 60px;
-  padding-inline: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
