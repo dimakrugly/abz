@@ -1,0 +1,14 @@
+@import "../../App";
+
+.button {
+  @include centre-items;
+
+  background-color: $primary-color;
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+
+  &__text {
+    @extend %body;
+  }
+}

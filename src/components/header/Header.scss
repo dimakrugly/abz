@@ -1,0 +1,17 @@
+.header {
+  height: 60px;
+  padding-inline: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 104px;
+    height: 26px;
+  }
+
+  &__buttonsContainer {
+    display: flex;
+    gap: 10px;
+  }
+}
