@@ -7,19 +7,13 @@
 }
 
 @mixin for-small-desktop {
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin for-desktop {
-  @media only screen and (max-width: 1137px) {
-    @content;
-  }
-}
-
-@mixin for-big-desktop {
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (min-width: 1280px) {
     @content;
   }
 }
@@ -35,6 +29,14 @@
 
   @include for-tablet {
     padding-inline: 32px;
+  }
+
+  @include for-small-desktop {
+    padding-inline: 60px;
+  }
+
+  @include for-desktop {
+    padding-inline: 0;
   }
 }
 

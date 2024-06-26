@@ -16,6 +16,8 @@
     @include flex-col;
 
     align-items: center;
+    margin-top: 50px;
+    gap: 20px;
 
     @include for-tablet {
       flex-wrap: wrap;
@@ -24,8 +26,9 @@
       gap: 16px;
     }
 
-    margin-top: 50px;
-    gap: 20px;
+    @include for-small-desktop {
+      gap: 29px;
+    }
   }
 
   &__button {

@@ -13,6 +13,14 @@
     width: 344px;
   }
 
+  @include for-small-desktop {
+    width: 282px;
+  }
+
+  @include for-desktop {
+    width: 330px;
+  }
+
   &__photo {
     height: 70px;
     width: 70px;
