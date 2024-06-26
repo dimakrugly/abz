@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { User } from '../models/User';
-import { fetchUsers } from '../actionCreators/ActionCreator';
+import { fetchPositions, fetchUsers } from '../actionCreators/ActionCreator';
+import { Position } from '../models/Position';
 
 interface UsersState {
     users: User[];
@@ -9,6 +10,7 @@ interface UsersState {
     currentPage: number;
     totalPages: number;
     nextUrl: string;
+    positions: Position[];
 }
 
 const initialState: UsersState = {
@@ -18,6 +20,7 @@ const initialState: UsersState = {
   currentPage: 0,
   totalPages: 0,
   nextUrl: '',
+  positions: [],
 };
 
 export const usersSlice = createSlice({
@@ -43,6 +46,9 @@ export const usersSlice = createSlice({
     builder.addCase(fetchUsers.rejected, (state, action) => {
       state.isLoadingUsers = false;
       state.error = action.error.message || 'Failed to fetch users';
+    });
+    builder.addCase(fetchPositions.fulfilled, (state, action) => {
+      state.positions = action.payload.positions;
     });
   },
 });

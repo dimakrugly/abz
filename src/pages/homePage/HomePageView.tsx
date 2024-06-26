@@ -10,6 +10,7 @@ export const HomePageView :React.FC<HomePageViewProps> = ({
   handleLoadNextPage,
   isLoadingUsers,
   isLastPage,
+  positions,
 }) => (
   <>
     <Header />
@@ -20,6 +21,6 @@ export const HomePageView :React.FC<HomePageViewProps> = ({
       isLoadingUsers={isLoadingUsers}
       isLastPage={isLastPage}
     />
-    <PostForm />
+    <PostForm positions={positions} />
   </>
 );

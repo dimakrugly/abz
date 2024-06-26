@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo } from 'react';
 import { HomePageView } from './HomePageView';
 import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
-import { fetchUsers } from '../../store/actionCreators/ActionCreator';
+import { fetchPositions, fetchUsers } from '../../store/actionCreators/ActionCreator';
 
 export const HomePage = () => {
   const dispatch = useAppDispatch();
@@ -12,10 +12,15 @@ export const HomePage = () => {
     isLoadingUsers,
     currentPage,
     totalPages,
+    positions,
   } = useAppSelector((state) => state.usersReducer);
 
   useEffect(() => {
     dispatch(fetchUsers('https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=6'));
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchPositions());
   }, [dispatch]);
 
   const handleLoadNextPage = useCallback(() => {
@@ -30,6 +35,7 @@ export const HomePage = () => {
       handleLoadNextPage={handleLoadNextPage}
       isLoadingUsers={isLoadingUsers}
       isLastPage={isLastPage}
+      positions={positions}
     />
   );
 };
