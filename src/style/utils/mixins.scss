@@ -1,13 +1,7 @@
 @import 'variables';
 
-@mixin for-mobile {
-  @media only screen and (max-width: 480px) {
-    @content;
-  }
-}
-
 @mixin for-tablet {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
@@ -38,6 +32,10 @@
 
 @mixin pageInlinePadding {
   padding-inline: 16px;
+
+  @include for-tablet {
+    padding-inline: 32px;
+  }
 }
 
 @mixin pageTransition {

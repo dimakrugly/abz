@@ -12,6 +12,10 @@
     border-radius: 4px;
     background-color: $background-color;
     padding-inline: 16px;
+
+    @include for-tablet {
+      min-width: 380px;
+    }
   }
 
   &__label {

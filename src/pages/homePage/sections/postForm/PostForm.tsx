@@ -31,17 +31,19 @@ export const PostForm = () => (
       <Input placeholder="Email" />
       <Input placeholder="Phone" hint="+38 (XXX) XXX - XX - XX" />
     </div>
-    <p className="postForm__radioTitle">Select your position</p>
-    <fieldset className="postForm__radioForm">
-      {positions.map((position) => (
-        <RadioButton
-          key={position.id}
-          id={position.id.toString()}
-          name={position.name}
-          groupName="positions"
-        />
-      ))}
-    </fieldset>
+    <div className="postForm__radioField">
+      <p className="postForm__radioTitle">Select your position</p>
+      <fieldset className="postForm__radioForm">
+        {positions.map((position) => (
+          <RadioButton
+            key={position.id}
+            id={position.id.toString()}
+            name={position.name}
+            groupName="positions"
+          />
+        ))}
+      </fieldset>
+    </div>
     <div className="postForm__uploader">
       <Uploader />
     </div>

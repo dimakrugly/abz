@@ -15,6 +15,15 @@
   &__items {
     @include flex-col;
 
+    align-items: center;
+
+    @include for-tablet {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+    }
+
     margin-top: 50px;
     gap: 20px;
   }

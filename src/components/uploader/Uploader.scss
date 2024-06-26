@@ -2,9 +2,15 @@
 
 .uploader {
   display: flex;
+  width: 100%;
+  min-width: 324px;
   max-width: 380px;
   height: 54px;
   align-items: center;
+
+  @include for-tablet {
+    width: 380px;
+  }
 
   &__button {
     @extend %body;
