@@ -4,7 +4,6 @@ import { RadioButton } from '../../../../components/radioButton/RadioButton';
 import { Uploader } from '../../../../components/uploader/Uploader';
 import { Button } from '../../../../components/button/Button';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const positions = [
   {
     id: 1,
@@ -48,7 +47,7 @@ export const PostForm = () => (
       <Uploader />
     </div>
     <div className="postForm__button">
-      <Button text="Sign up" />
+      <Button text="Sign up" onClick={() => {}} />
     </div>
   </section>
 );
