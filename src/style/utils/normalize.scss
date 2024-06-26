@@ -23,6 +23,10 @@ padding: 0;
 border: 0;
 }
 
+input:focus{
+  outline: none;
+}
+
 button {
   cursor: pointer;
 }

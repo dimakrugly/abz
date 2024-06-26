@@ -1,0 +1,48 @@
+@import "../../App";
+
+.input {
+  position: relative;
+
+  &__field {
+    @extend %body;
+
+    height: 54px;
+    min-width: 328px;
+    border: 1px solid $color-lt-gray;
+    border-radius: 4px;
+    background-color: $background-color;
+    padding-inline: 16px;
+  }
+
+  &__label {
+    @extend %body;
+
+    position: absolute;
+    pointer-events: none;
+    transition: 300ms ease all;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-gray;
+
+    &--fulfilled {
+      @extend %placeholder;
+
+      top: -8px;
+      background-color: $background-color;
+      transform: none;
+    }
+  }
+
+  &__hint {
+    @extend %placeholder;
+
+    background-color: $background-color;
+    position: absolute;
+    bottom: -18px;
+    left: 16px;
+    color: $color-gray;
+  }
+}
+
+

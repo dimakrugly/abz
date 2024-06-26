@@ -1,0 +1,45 @@
+@import "../../../../App";
+
+.postForm {
+  @include pageInlinePadding;
+  @include flex-col;
+
+  padding-top: 140px;
+  padding-bottom: 100px;
+  background-color: $background-color;
+
+  &__title {
+    @extend %heading;
+    @include center-text;
+  }
+
+  &__inputContainer {
+    @include flex-col;
+
+    padding-top: 50px;
+    gap: 50px;
+  }
+
+  &__radioTitle {
+    @extend %body;
+
+    margin-top: 43px;
+  }
+
+  &__radioForm {
+    @include flex-col;
+
+    padding-top: 11px;
+    gap: 7px;
+  }
+
+  &__uploader {
+    margin-top: 47px;
+  }
+
+  &__button {
+    @include center-items;
+
+    margin-top: 50px;
+  }
+}

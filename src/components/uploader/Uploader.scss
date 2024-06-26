@@ -1,0 +1,31 @@
+@import '../../App';
+
+.uploader {
+  display: flex;
+  max-width: 380px;
+  height: 54px;
+  align-items: center;
+
+  &__button {
+    @extend %body;
+
+    width: 83px;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid black;
+  }
+
+  &__path {
+    @extend %body;
+
+    color: $color-gray;
+    flex: 1;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid $color-lt-gray;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+  }
+}
