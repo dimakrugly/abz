@@ -8,7 +8,7 @@ import { PostFormProps } from './PostFormTypes';
 import { Preloader } from '../../../../components/preloader/Preloader';
 
 export const PostForm: React.FC<PostFormProps> = ({ positions }) => (
-  <section className="postForm">
+  <form className="postForm">
     <h1 className="postForm__title">Working with POST request</h1>
     <div className="postForm__inputContainer">
       <Input placeholder="Your name" />
@@ -36,9 +36,8 @@ export const PostForm: React.FC<PostFormProps> = ({ positions }) => (
     <div className="postForm__button">
       <Button
         text="Sign up"
-        onClick={() => {
-        }}
+        onClick={() => {}}
       />
     </div>
-  </section>
+  </form>
 );

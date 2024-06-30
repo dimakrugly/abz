@@ -15,7 +15,6 @@
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.52.0",
     "react-redux": "^9.1.2",
     "react-scripts": "5.0.1",
     "sass": "^1.77.6",
@@ -48,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
     "eslint": "8.57.0",

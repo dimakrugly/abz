@@ -13,6 +13,10 @@
     background-color: $background-color;
     padding-inline: 16px;
 
+    &--error {
+      border-color: $error-color;
+    }
+
     @include for-tablet {
       min-width: 380px;
     }
@@ -28,6 +32,10 @@
     top: 50%;
     transform: translateY(-50%);
     color: $color-gray;
+
+    &--error {
+      color: $error-color;
+    }
 
     &--fulfilled {
       @extend %placeholder;
@@ -48,5 +56,3 @@
     color: $color-gray;
   }
 }
-
-

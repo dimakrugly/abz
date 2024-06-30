@@ -2,36 +2,49 @@
 
 .uploader {
   display: flex;
-  width: 100%;
+  align-items: normal;
+  width: 380px;
   min-width: 324px;
   max-width: 380px;
   height: 54px;
-  align-items: center;
 
   @include for-tablet {
     width: 380px;
   }
 
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+
   &__button {
     @extend %body;
+    @include center-items;
 
     width: 83px;
     height: 100%;
-    background-color: transparent;
     border-radius: 4px 0 0 4px;
     border: 1px solid black;
   }
 
-  &__path {
+  &__text {
     @extend %body;
 
-    color: $color-gray;
-    flex: 1;
-    height: 100%;
-    border-radius: 0 4px 4px 0;
-    border: 1px solid $color-lt-gray;
     display: flex;
     align-items: center;
-    padding-left: 16px;
+    padding: 0 0 0 16px;
+    color: $color-gray;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid $color-lt-gray;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__input {
+    display: none;
   }
 }

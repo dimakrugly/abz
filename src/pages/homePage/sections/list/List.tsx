@@ -19,6 +19,7 @@ export const List:React.FC<ListProps> = ({
       ))}
     </ul>
     <div className="list__button">
+
       {isLoadingUsers ? <Preloader /> : (
         <Button
           text="Show more"

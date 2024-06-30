@@ -2,7 +2,11 @@ import React from 'react';
 import { ButtonProps } from './ButtonTypes';
 import './Button.scss';
 
-export const Button: React.FC<ButtonProps> = ({ text, disabled = false, onClick }) => (
+export const Button: React.FC<ButtonProps> = ({
+  text,
+  disabled = false,
+  onClick,
+}) => (
   <button
     type="button"
     className={`button ${disabled && 'button--disabled'}`}
