@@ -25,6 +25,7 @@
     @include flex-col;
     margin-top: 43px;
     width: 100%;
+    position: relative;
 
     @include for-tablet {
       max-width: 380px;

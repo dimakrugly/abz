@@ -18,6 +18,16 @@ export const fetchPositions = createAsyncThunk(
     return response.data;
   },
 );
+
+export const getToken = createAsyncThunk(
+  'users/getToken',
+  async () => {
+    const response = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/token');
+
+    return response.data;
+  },
+);
+
 //
 // export const removePost = createAsyncThunk(
 //   'news/removePost',

@@ -7,13 +7,43 @@ import { Button } from '../../../../components/button/Button';
 import { PostFormProps } from './PostFormTypes';
 import { Preloader } from '../../../../components/preloader/Preloader';
 
-export const PostForm: React.FC<PostFormProps> = ({ positions }) => (
-  <form className="postForm">
+export const PostForm: React.FC<PostFormProps> = ({
+  positions,
+  handleSubmit,
+  errors,
+  register,
+  watch,
+  setValue,
+  isValid,
+}) => (
+  <form className="postForm" onSubmit={handleSubmit}>
     <h1 className="postForm__title">Working with POST request</h1>
     <div className="postForm__inputContainer">
-      <Input placeholder="Your name" />
-      <Input placeholder="Email" />
-      <Input placeholder="Phone" hint="+38 (XXX) XXX - XX - XX" />
+      <Input
+        placeholder="Your name"
+        name="name"
+        errors={errors}
+        register={register}
+        watch={watch}
+        type="text"
+      />
+      <Input
+        placeholder="Email"
+        name="email"
+        errors={errors}
+        register={register}
+        watch={watch}
+        type="email"
+      />
+      <Input
+        placeholder="Phone"
+        hint="+38 (XXX) XXX - XX - XX"
+        name="tel"
+        errors={errors}
+        register={register}
+        watch={watch}
+        type="tel"
+      />
     </div>
     <div className="postForm__radioField">
       <p className="postForm__radioTitle">Select your position</p>
@@ -23,20 +53,26 @@ export const PostForm: React.FC<PostFormProps> = ({ positions }) => (
             <RadioButton
               key={position.id}
               id={position.id.toString()}
-              name={position.name}
-              groupName="positions"
+              position={position.name}
+              register={register}
             />
           ))}
         </fieldset>
       )}
     </div>
     <div className="postForm__uploader">
-      <Uploader />
+      <Uploader
+        register={register}
+        watch={watch}
+        setValue={setValue}
+        errors={errors}
+      />
     </div>
     <div className="postForm__button">
       <Button
         text="Sign up"
-        onClick={() => {}}
+        onClick={handleSubmit}
+        disabled={!isValid}
       />
     </div>
   </form>

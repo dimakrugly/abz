@@ -11,6 +11,13 @@ export const HomePageView :React.FC<HomePageViewProps> = ({
   isLoadingUsers,
   isLastPage,
   positions,
+  handleSubmit,
+  errors,
+  register,
+  watch,
+  setValue,
+  isValid,
+
 }) => (
   <>
     <Header />
@@ -23,6 +30,12 @@ export const HomePageView :React.FC<HomePageViewProps> = ({
     />
     <PostForm
       positions={positions}
+      handleSubmit={handleSubmit}
+      errors={errors}
+      register={register}
+      watch={watch}
+      setValue={setValue}
+      isValid={isValid}
     />
   </>
 );

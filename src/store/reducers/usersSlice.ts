@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { User } from '../models/User';
-import { fetchPositions, fetchUsers } from '../actionCreators/ActionCreator';
+import { fetchPositions, fetchUsers, getToken } from '../actionCreators/ActionCreator';
 import { Position } from '../models/Position';
 
 interface UsersState {
+    token: string;
     users: User[];
     isLoadingUsers: boolean;
     error: string;
@@ -14,6 +15,7 @@ interface UsersState {
 }
 
 const initialState: UsersState = {
+  token: '',
   users: [],
   isLoadingUsers: false,
   error: '',
@@ -49,6 +51,9 @@ export const usersSlice = createSlice({
     });
     builder.addCase(fetchPositions.fulfilled, (state, action) => {
       state.positions = action.payload.positions;
+    });
+    builder.addCase(getToken.fulfilled, (state, action) => {
+      state.token = action.payload.token;
     });
   },
 });
